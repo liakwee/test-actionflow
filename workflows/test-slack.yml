@@ -1,15 +1,15 @@
-name: Send a slack message when get new from reddit
-on:
-  reddit:
-    url: https://reddit.com/r/news/
-jobs:
-  slack:
-    name: Send a message to Slack
-    runs-on: ubuntu-latest
-    steps:
-      - name: Slack notification
-        env:
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-        uses: Ilshidur/action-slack@2.1.0
-        with:
-          args: ${{ on.reddit.outputs.title }}
+# name: Send a slack message when get new from reddit
+# on:
+#   reddit:
+#     url: https://reddit.com/r/news/
+# jobs:
+#   slack:
+#     name: Send a message to Slack
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Slack notification
+#         env:
+#           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+#         uses: Ilshidur/action-slack@2.1.0
+#         with:
+#           args: ${{ on.reddit.outputs.title }}
